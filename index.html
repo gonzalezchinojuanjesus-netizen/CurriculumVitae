@@ -6,16 +6,367 @@
     <title>Document</title>
 </head>
 <body>
-    <p style="color :brown">Hola mundo</p>
-    <p>Mi nombre</p>
-    <p>Mi nombre</p>
-    <p>Mi nombre</p>
-    <p>Mi nombre</p>
-    <p>Mi nombre</p>
-    <p>Mi nombre</p>
-    <p>Mi nombre</p>
-    <p>Mi nombre</p>
-    <p>Mi nombre</p>
-    <p>Mi nombre</p>
+   
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Vitae | Tu Nombre</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f5f7;
+            color: #263238;
+            line-height: 1.6;
+            padding: 30px 15px;
+        }
+
+        .cv {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.10);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        aside {
+            background: #183b56;
+            color: white;
+            padding: 35px 25px;
+        }
+
+        .foto {
+            width: 125px;
+            height: 125px;
+            border-radius: 50%;
+            margin: 0 auto 22px;
+            background: #d7e2ea;
+            color: #183b56;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 13px;
+            border: 4px solid white;
+        }
+
+        aside h2 {
+            font-size: 16px;
+            text-transform: uppercase;
+            border-bottom: 2px solid rgba(255,255,255,.45);
+            padding-bottom: 7px;
+            margin: 25px 0 12px;
+        }
+
+        aside p, aside li {
+            font-size: 13px;
+            color: #edf3f7;
+        }
+
+        aside ul {
+            list-style: none;
+        }
+
+        aside li {
+            margin-bottom: 9px;
+        }
+
+        main {
+            padding: 42px 38px;
+        }
+
+        .encabezado {
+            border-bottom: 3px solid #eaf1f6;
+            padding-bottom: 22px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            color: #183b56;
+            font-size: 34px;
+            line-height: 1.15;
+            text-transform: uppercase;
+        }
+
+        .puesto {
+            color: #5b6570;
+            font-size: 16px;
+            margin-top: 8px;
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        main h2 {
+            color: #183b56;
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        main p, main li {
+            font-size: 14px;
+            color: #46515b;
+        }
+
+        .item {
+            margin-bottom: 15px;
+        }
+
+        .item h3 {
+            font-size: 15px;
+            color: #263238;
+        }
+
+        .fecha {
+            color: #71808d;
+            font-size: 12px;
+            font-weight: bold;
+            margin: 2px 0 5px;
+        }
+
+        .habilidades {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .habilidades span {
+            background: #eaf1f6;
+            color: #183b56;
+            padding: 6px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .nota {
+            max-width: 900px;
+            margin: 14px auto;
+            color: #68737d;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        @media (max-width: 700px) {
+            .cv {
+                grid-template-columns: 1fr;
+            }
+
+            aside {
+                padding: 28px 25px;
+            }
+
+            main {
+                padding: 30px 25px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .foto {
+                margin-left: 0;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .cv {
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .nota {
+                display: none;
+            }
+
+            @page {
+                size: A4;
+                margin: 10mm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cv">
+
+        <aside>
+
+            <div class="foto">
+                AGREGA<br>UNA FOTO
+            </div>
+
+            <h2>Contacto</h2>
+
+            <ul>
+                <li>📍 Ciudad, Estado, México</li>
+                <li>📞 000 000 0000</li>
+                <li>✉️ correo@ejemplo.com</li>
+                <li>🌐 linkedin.com/in/tu-perfil</li>
+            </ul>
+
+            <h2>Habilidades</h2>
+
+            <ul>
+                <li>Trabajo en equipo</li>
+                <li>Comunicación</li>
+                <li>Resolución de problemas</li>
+                <li>Organización</li>
+                <li>Aprendizaje rápido</li>
+            </ul>
+
+            <h2>Idiomas</h2>
+
+            <ul>
+                <li>Español: Nativo</li>
+                <li>Inglés: Básico / Intermedio</li>
+            </ul>
+
+        </aside>
+
+        <main>
+
+            <header class="encabezado">
+
+                <h1>
+                    Tu Nombre<br>
+                    Apellido
+                </h1>
+
+                <p class="puesto">
+                    Estudiante de Ingeniería en Sistemas Computacionales
+                </p>
+
+            </header>
+
+            <section>
+
+                <h2>Perfil profesional</h2>
+
+                <p>
+                    Estudiante interesado en la tecnología y el desarrollo
+                    de software. Me considero una persona responsable,
+                    proactiva y con disposición para aprender. Busco
+                    desarrollar mis conocimientos y adquirir experiencia
+                    en proyectos que me permitan crecer profesionalmente.
+                </p>
+
+            </section>
+
+            <section>
+
+                <h2>Formación académica</h2>
+
+                <div class="item">
+
+                    <h3>Ingeniería en Sistemas Computacionales</h3>
+
+                    <p class="fecha">
+                        Nombre de la institución | Año de inicio – Actualidad
+                    </p>
+
+                    <p>
+                        Actualmente cursando la carrera. Áreas de interés:
+                        programación, desarrollo web y tecnologías de
+                        la información.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <section>
+
+                <h2>Experiencia</h2>
+
+                <div class="item">
+
+                    <h3>Proyectos académicos</h3>
+
+                    <p class="fecha">Año – Actualidad</p>
+
+                    <p>
+                        Desarrollo de ejercicios y proyectos escolares
+                        utilizando herramientas de programación.
+                        Trabajo colaborativo, solución de problemas
+                        y documentación básica de código.
+                    </p>
+
+                </div>
+
+                <div class="item">
+
+                    <h3>Experiencia laboral</h3>
+
+                    <p class="fecha">Empresa | Periodo</p>
+
+                    <p>
+                        Agrega aquí tus actividades, responsabilidades
+                        y logros. Si aún no tienes experiencia laboral,
+                        puedes eliminar esta sección.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <section>
+
+                <h2>Conocimientos técnicos</h2>
+
+                <div class="habilidades">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Java</span>
+                    <span>Python</span>
+                    <span>Microsoft Office</span>
+                </div>
+
+            </section>
+
+            <section>
+
+                <h2>Objetivo</h2>
+
+                <p>
+                    Integrarme a un entorno donde pueda aplicar lo
+                    aprendido, fortalecer mis habilidades y contribuir
+                    con responsabilidad al cumplimiento de los objetivos
+                    del equipo.
+                </p>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <p class="nota">
+        Plantilla editable: reemplaza los datos de ejemplo
+        con tu información antes de entregar.
+    </p>
+
+</body>
+</html>
+
 </body>
 </html>
